@@ -1,5 +1,5 @@
 ---
-typora-root-url: Image
+typora-root-url: ./
 ---
 
 ## C++面经大纲
