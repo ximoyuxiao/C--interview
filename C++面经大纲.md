@@ -1,5 +1,5 @@
 ---
-typora-root-url: ./
+typora-root-url: Image
 ---
 
 ## C++面经大纲
@@ -1302,3 +1302,4 @@ mysql日志
 >
 >
 
+H264和mpeg4
