@@ -1,5 +1,5 @@
 ---
-，typora-root-url: Image
+typora-root-url: Image
 ---
 
 ## C++面经大纲
@@ -356,28 +356,24 @@ unique-ptr和scoped-ptr什么区别？
 
 简述一下C++11中auto的用法
 
-> 标准回答
->
 > 1. 实现自动类型推断，要求进行显示初始化，让编译器能够将变量的类型设置为初始值的类型：
 >
 > > autoa=12;//a为int类型
-> >
+>>
 > > autopt=&a;//pt为int*类型
 > >
-> >  
+> >  doublefm(doublea,intb){
 > >
-> > doublefm(doublea,intb){
+> > returna+b;
 > >
-> >   returna+b;
-> >
-> > }
+> >   }
 > >
 > > autopf=fm;//pf为double类型
->
+> 
 > 2. 简化模板声明
->
+> 
 > > for(std::initializer_list<double>::iteratorp=il.begin();p!=il.end();p++)
-> >
+>>
 > > for(autop=il.begin();p!=il.end();p++)
 
 ### linux
@@ -598,35 +594,41 @@ IO模型：
 
 系统检测工具：
 
+>1、tcpdump 网络抓包工具，可以通过类型、方向和协议过滤
 >
+> 2、lsof          列出当前系统打开的文件描述符的工具。 通过 lsof -p pid 来指定查看某个进程的文件描述符，主要字段FD、TYPE、SIZE/OFF、NAME
+>
+>3、nc(netcat)主要用于快速构建一个网络连接。可以用来调试服务器程序。
+>
+>4、strace 测试服务器性能的重要工具，他可以跟踪程序运行过程中执行的系统调用和接收到的信号。
+>
+>- -c  统计系统调用的执行时间、执行次数和出错次数  
+>- -f   跟踪由fork调用产生的子进程
+>- -t   在输出的每一行信息前加上时间信息
+>- -e  指定一个表达式，用来控制如何跟踪系统调用
+>- -o 将输出写入到指定文件
+>
+>5、netstat 网络信息统计工具，他可以打印本地网卡接口上的全部网络相关信息。（可以显示TCP连接及其状态信息）
+>
+>6、vmstat 可以监视系统的内存、交换分区、CPU使用率和IO情况
+>
+>7、ifstat  简单的网络流量测量检测工具
+>
+>8、mpstat 实时检测多处理器系统上每个CPU的使用情况
+>
+>9、df可以用于观察文件系统
+>
+>10、free对内存进行观察 有swap和MEM
+>
+>![image-20220510161755448](C:/Users/HP/Desktop/CPP%E9%9D%A2%E7%BB%8F/Image/image-20220510161755448.png)
+>
+>11、top指令  类似于 windows资源管理器
+>
+>![image-20220510161850657](C:/Users/HP/Desktop/CPP%E9%9D%A2%E7%BB%8F/Image/image-20220510161850657.png)
 
 用户态协议栈：
 
 > 
-
-
-
-
-
-
-
-linux工具
-
->1、tcpdump
->
->2、lsof
->
->3、nc(netcat)
->
->4、strace
->
->5、netstat
->
->6、vmstat
->
->7、ifstat
->
->8、
 
 #### linux命令
 
